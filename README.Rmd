@@ -2,7 +2,7 @@
 output: github_document
 ---
 
-# Project template
+# Project Template
 
 ![Last updated](https://img.shields.io/github/last-commit/mavrxlab/project-template)
 

@@ -33,12 +33,12 @@ affiliation:
 
 # Alter the authornote to meet your specifications
 authornote: |
-  This paper was created for APCV 101 - Applied Digital Basket Weaving.
+  This is the authornote for this document.
   
 abstract: |
   `r lorem::ipsum(paragraphs = 1)`
 
-keywords          : "project template, university of arizona, papaja, tidytuesday, tinyverse"
+keywords          : "project template, university of arizona, papaja, tinyverse"
 wordcount         : "X"             # Update this when completed
 
 bibliography      : ["r-references.bib", "refs.bib"]
@@ -76,13 +76,13 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed, echo=FALSE, message=FALSE,
 
 ```{r dataload, include=FALSE}
 # Load your munge script, which imports data and cleans it
-source(here("src", "munge.R"))
+source(here("3-Study", "3-Data_Analysis", "munge.R"))
 
 # Then load your exploratory data analysis
-source(here("src", "eda.R"))
+source(here("3-Study", "3-Data_Analysis", "eda.R"))
 
 # And then load your plots
-source(here("src", "plots.R"))
+source(here("3-Study", "3-Data_Analysis", "plots.R"))
 ```
 
 

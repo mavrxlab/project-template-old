@@ -1,6 +1,6 @@
 ## Template Information
 
-Based on the template made by [Ryan Straight](https://github.com/ryanstraight) with [APCV 302](https://uaappcomp.github.io/apcv302/) in mind, specifically, as the focus is on using R for data analysis, this template is simple enough to fit most needs at the undergraduate level and has the media structure necessary for projects within the lab.
+Based on the template made by [Ryan Straight](https://github.com/ryanstraight) with [APCV 302](https://uaappcomp.github.io/apcv302/) in mind, specifically, as the focus is on using R for data analysis, this template is simple enough to fit most needs and has the media structure necessary for projects within the lab.
 
 If you'd rather not use the R-based ecosystem for writing that's present in the template, that's fine. The folder structure will still serve you well.
 
@@ -11,12 +11,12 @@ The actual report document being produced is an APA 6th edition document using t
 An example of how to do this is to remove the `tidytuesdayR` data loading line from `munge.R`. Instead, simply run this in the console:
 
 ```r
-download.file('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-11/colony.csv', here("data", "raw", "colony.csv"))
+download.file('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-11/colony.csv', here("3-Study", "2-Content", "1-Data", "raw", "colony.csv"))
 ```
 
 Then, your data load in `munge.R` would be as such and you needn't worry about loading from GitHub:
 
-`colony <- readr::read_csv(here("data", "raw", "colony.csv'))`
+`colony <- readr::read_csv(here("3-Study", "2-Content", "1-Data", "raw", "colony.csv'))`
 
 
 ## Authors
@@ -28,30 +28,31 @@ Then, your data load in `munge.R` would be as such and you needn't worry about l
 
 ## Report
 
-The resultant report from this project is `/docs/draft.pdf` by default. The `papaja` document, `/docs/draft.Rmd`, has a variety of comments and instructions within as comments. These are general suggestions that follow a generic research paper structure.
+The resultant publications from this project go in `4-Dissemination/2-Publications/` in subfolders for each individual publication. The `papaja` document, `draft.Rmd`, has a variety of comments and instructions within as comments. These are general suggestions that follow a generic research paper structure.
 
 ## Folder and file structure
 
-This is the default structure for a project. It's very basic and you should feel welcome to alter it to your liking. There is another README in the `3-Study/2-Content/2-Media/` folder that explains the extensive structure there.
+This is the default structure for a project. It's very basic and you should feel welcome to alter it to your liking. There is another README in the `3-Study/2-Content/2-Media/` folder that explains the extensive structure there. This structure is not meant to be in chronological order, just organized.
 
 1. Project Management
     1. Proposals
-    1. Finance (grants, et cetera)
-    1. Reports
+    1. Finance (notes on seeking funding, so on; copies of grant proposal)
+    1. Reports (not papers; project-related reports like status)
+    1. Administration (CRediT author list, publication checklist, )
 1. Ethics Governance
     1. Ethics Approval (IRB, CITI certification)
-    1. Consent Forms (**blank**; completed stored securely)
+    1. Forms (**blank** consent, waiver, etc forms; completed forms should be stored securely)
 1. Study
-    1. Input/Munge (data loading, cleaning, EDA)
+    1. Input (files/docs used in the experiment itself; survey instrument, anything)
     1. Content
         1. Data (raw and tidied data)
-        1. Media (videos, audio, screencasts, so on)
-    1. Data Analysis
-    1. Outputs
+        1. Media (video recordings, audio, screencasts, so on)
+    1. Data Analysis (eda, munging scripts, transformation, etc)
+    1. Outputs (tables, figures, etc)
 1. Dissemination
     1. Presentations (archived)
     1. Publications (archived)
     1. Publicity (archived)
     
 
-
+Note that the Dissemination folder is for *archiving* content.

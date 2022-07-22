@@ -1,6 +1,8 @@
 # Media folder structure
 
-Here is where you should keep media files for each individual case/instance/participant/etc.
+Here is where you should keep media files for each individual case/instance/participant/etc. It's entirely possible you will not use this folder at all.
+
+**Remember: if you're keeping this project folder structure online like via GitHub, do NOT upload photos, images, recordings, or other materials that identify participants as per your ethical governance documents (IRB).**
 
 Simply copy `001` as many times as necessary and rename as appropriate. This is really just to get you started.
 
