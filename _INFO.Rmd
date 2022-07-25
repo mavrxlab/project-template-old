@@ -1,22 +1,22 @@
 ## Template Information
 
-Based on the template made by [Ryan Straight](https://github.com/ryanstraight) with [APCV 302](https://uaappcomp.github.io/apcv302/) in mind, specifically, as the focus is on using R for data analysis, this template is simple enough to fit most needs and has the media structure necessary for projects within the lab.
+Based on the template [Setting up an Organised Folder Structure for Research Projects by Nikola Vukovic](http://www.nikola.me/folder_structure.html) and tweaked  by [Ryan Straight](https://github.com/ryanstraight) with [APCV 302](https://uaappcomp.github.io/apcv302/) in mind, specifically, as the focus is on using R for data analysis, this template is simple enough to fit most needs and has the media structure necessary for projects within the lab.
 
 If you'd rather not use the R-based ecosystem for writing that's present in the template, that's fine. The folder structure will still serve you well.
 
 The actual report document being produced is an APA 6th edition document using the [`papaja`](https://github.com/crsh/papaja) package, and uses [`rfordatascience/tidytuesday`](https://github.com/rfordatascience/tidytuesday) code. You should also install `tinytex`, of course, as per the `papaja` instructions. Some demo code had been added to the script files and dummy text to the `draft.Rmd` to produce an example PDF. The `Bee Colony losses` dataset is loaded as an example. You'll notice heavy use of the `here` package, as well.
 
-**Important**: each time you knit `draft.Rmd`, you will query GitHub. There is a limit on how often you can do this. Manually downloading the data  into the `/data/raw` folder and loading from there will get around this.
+**Important**: each time you knit `draft.Rmd`, you will query GitHub. There is a limit on how often you can do this. Manually downloading the data into the folder for raw data and loading from there will get around this.
 
 An example of how to do this is to remove the `tidytuesdayR` data loading line from `munge.R`. Instead, simply run this in the console:
 
 ```r
-download.file('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-11/colony.csv', here("3-Study", "2-Content", "1-Data", "raw", "colony.csv"))
+download.file('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-11/colony.csv', here::here("3-Study", "2-Content", "1-Data", "raw", "colony.csv"))
 ```
 
 Then, your data load in `munge.R` would be as such and you needn't worry about loading from GitHub:
 
-`colony <- readr::read_csv(here("3-Study", "2-Content", "1-Data", "raw", "colony.csv'))`
+`colony <- readr::read_csv(here::here("3-Study", "2-Content", "1-Data", "raw", "colony.csv'))`
 
 
 ## Authors

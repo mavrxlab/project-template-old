@@ -41,8 +41,10 @@ a *de facto* pre-registration and can be used in your OSF project.
 
 ## Template Information
 
-Based on the template made by [Ryan
-Straight](https://github.com/ryanstraight) with [APCV
+Based on the template [Setting up an Organised Folder Structure for
+Research Projects by Nikola
+Vukovic](http://www.nikola.me/folder_structure.html) and tweaked by
+[Ryan Straight](https://github.com/ryanstraight) with [APCV
 302](https://uaappcomp.github.io/apcv302/) in mind, specifically, as the
 focus is on using R for data analysis, this template is simple enough to
 fit most needs and has the media structure necessary for projects within
@@ -63,20 +65,20 @@ use of the `here` package, as well.
 
 **Important**: each time you knit `draft.Rmd`, you will query GitHub.
 There is a limit on how often you can do this. Manually downloading the
-data into the `/data/raw` folder and loading from there will get around
+data into the folder for raw data and loading from there will get around
 this.
 
 An example of how to do this is to remove the `tidytuesdayR` data
 loading line from `munge.R`. Instead, simply run this in the console:
 
 ``` r
-download.file('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-11/colony.csv', here("3-Study", "2-Content", "1-Data", "raw", "colony.csv"))
+download.file('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-11/colony.csv', here::here("3-Study", "2-Content", "1-Data", "raw", "colony.csv"))
 ```
 
 Then, your data load in `munge.R` would be as such and you needn’t worry
 about loading from GitHub:
 
-`colony <- readr::read_csv(here("3-Study", "2-Content", "1-Data", "raw", "colony.csv'))`
+`colony <- readr::read_csv(here::here("3-Study", "2-Content", "1-Data", "raw", "colony.csv'))`
 
 ## Authors
 
