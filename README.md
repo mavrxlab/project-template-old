@@ -44,18 +44,19 @@ a *de facto* pre-registration and can be used in your OSF project.
 Based on the template [Setting up an Organised Folder Structure for
 Research Projects by Nikola
 Vukovic](http://www.nikola.me/folder_structure.html) and tweaked by
-[Ryan Straight](https://github.com/ryanstraight) with [APCV
-302](https://uaappcomp.github.io/apcv302/) in mind, specifically, as the
-focus is on using R for data analysis, this template is simple enough to
-fit most needs and has the media structure necessary for projects within
-the lab.
+[Ryan Straight](https://github.com/ryanstraight) with the [MA{VR}X
+Lab](https://mavrxlab.org) in mind, specifically, as the focus is on
+using R for data analysis, this template is simple enough to fit most
+needs and has the media structure necessary for projects within the lab.
 
 If you’d rather not use the R-based ecosystem for writing that’s present
 in the template, that’s fine. The folder structure will still serve you
 well.
 
-The actual report document being produced is an APA 6th edition document
-using the [`papaja`](https://github.com/crsh/papaja) package, and uses
+A placeholder publication draft can be found in
+`4-Dissemination/2-Publications/000-DRAFT/`. The actual report document
+being produced is an APA 6th edition document using the
+[`papaja`](https://github.com/crsh/papaja) package, and uses
 [`rfordatascience/tidytuesday`](https://github.com/rfordatascience/tidytuesday)
 code. You should also install `tinytex`, of course, as per the `papaja`
 instructions. Some demo code had been added to the script files and
@@ -63,34 +64,17 @@ dummy text to the `draft.Rmd` to produce an example PDF. The
 `Bee Colony losses` dataset is loaded as an example. You’ll notice heavy
 use of the `here` package, as well.
 
-**Important**: each time you knit `draft.Rmd`, you will query GitHub.
-There is a limit on how often you can do this. Manually downloading the
-data into the folder for raw data and loading from there will get around
-this.
-
-An example of how to do this is to remove the `tidytuesdayR` data
-loading line from `munge.R`. Instead, simply run this in the console:
-
-``` r
-download.file('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-11/colony.csv', here::here("3-Study", "2-Content", "1-Data", "raw", "colony.csv"))
-```
-
-Then, your data load in `munge.R` would be as such and you needn’t worry
-about loading from GitHub:
-
-`colony <- readr::read_csv(here::here("3-Study", "2-Content", "1-Data", "raw", "colony.csv'))`
+**This `draft.Rmd` file is just a demonstration, as you will likely want
+to keep your draft private.**
 
 ## Authors
 
-1.  Make your copy of the [contributor’s
-    template](https://docs.google.com/spreadsheets/d/1Gl0cwqN_nTsdFH9yhSvi9NypBfDCEhViGq4A3MnBrG8/copy)
-    and complete as needed. Ensure your spreadsheet’s permissions are
-    set to `Anyone with the link can view`.
-2.  Place that URL in step 2 of the
+1.  Update the `contributors_table_template.csv` file in
+    `1-Project_Management/4-Administration/` with relevant authors and
+    contributors.
+2.  Upload the CSV in step 2 of the
     [tenzing](https://rollercoaster.shinyapps.io/tenzing/) Shiny app.
-    (You can use [this
-    spreadsheet](https://docs.google.com/spreadsheets/d/1-WmAfoW3HoHGfmeahcOrSTGxXwZpScUBajoHHrQ0Qy8/edit#gid=0)
-    as a demonstration if you like.)
+    (You can use the file provided as a demonstration if you like.)
 3.  Choose `Show papaja YAML` in Step 3.
 4.  Replace the `author` and `affiliation` frontmatter in the
     `draft.Rmd` file with this new YAML.
@@ -113,10 +97,10 @@ order, just organized.
 
 1.  Project Management
     1.  Proposals
-    2.  Finance (notes on seeking funding, so on; copies of grant
-        proposal)
+    2.  Finance (notes on seeking funding, copies of grant proposals,
+        etc; contains NSF grant template)
     3.  Reports (not papers; project-related reports like status)
-    4.  Administration (CRediT author list, publication checklist, )
+    4.  Administration (CRediT author list, publication checklist)
 2.  Ethics Governance
     1.  Ethics Approval (IRB, CITI certification)
     2.  Forms (**blank** consent, waiver, etc forms; completed forms
@@ -126,7 +110,8 @@ order, just organized.
         instrument, anything)
     2.  Content
         1.  Data (raw and tidied data)
-        2.  Media (video recordings, audio, screencasts, so on)
+        2.  Media (video recordings, audio, screencasts, so on; do
+            **not** include identifiable participant content)
     3.  Data Analysis (eda, munging scripts, transformation, etc)
     4.  Outputs (tables, figures, etc)
 4.  Dissemination
@@ -134,4 +119,6 @@ order, just organized.
     2.  Publications (archived)
     3.  Publicity (archived)
 
-Note that the Dissemination folder is for *archiving* content.
+Note that the Dissemination folder is for *archiving* content. Once
+something is published or made available, put a copy in the appropriate
+folder.
