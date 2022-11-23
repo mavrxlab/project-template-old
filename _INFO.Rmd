@@ -32,7 +32,7 @@ This is the default structure for a project. It's very basic and you should feel
 1. Ethics Governance
     1. Ethics Approval (IRB, CITI certification)
     1. Forms (**blank** consent, waiver, etc forms; completed forms should be stored securely)
-1. Study
+1. Study (_TEMPLATE subfolder contains the following for each different study)
     1. Input (files/docs used in the experiment itself; survey instrument, anything)
     1. Content
         1. Data (raw and tidied data)

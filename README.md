@@ -105,7 +105,8 @@ order, just organized.
     1.  Ethics Approval (IRB, CITI certification)
     2.  Forms (**blank** consent, waiver, etc forms; completed forms
         should be stored securely)
-3.  Study
+3.  Study (\_TEMPLATE subfolder contains the following for each
+    different study)
     1.  Input (files/docs used in the experiment itself; survey
         instrument, anything)
     2.  Content
