@@ -1,8 +1,10 @@
 
 # Project Template
 
+**This repository is depreciated. There is now a [Quarto-based template](https://github.com/mavrxlab/project-template/) that has been updated and improved.**
+
 ![Last
-updated](https://img.shields.io/github/last-commit/mavrxlab/project-template)
+updated](https://img.shields.io/github/last-commit/mavrxlab/project-template-old)
 
 <!-- Only edit README.Rmd, never README.md! Knitting README.Rmd will produce README.md -->
 
